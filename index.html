@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chizaram Okoye — Project Delivery Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101C2C;
+    --line:#2A4A6B;
+    --line-soft:#B9C6D6;
+    --paper:#F5F3EE;
+    --paper-panel:#FFFFFF;
+    --text:#1B1B18;
+    --text-soft:#4A5568;
+    --brass:#B8863B;
+    --teal:#3F6D63;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--text);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.55;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:56px 32px 80px;}
+
+  header{
+    border-bottom:2px solid var(--ink);
+    padding-bottom:24px;
+    margin-bottom:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .header-left{
+    display:flex;
+    align-items:flex-end;
+    gap:20px;
+  }
+  .avatar{
+    width:84px;
+    height:84px;
+    border-radius:6px;
+    object-fit:cover;
+    border:2px solid var(--ink);
+    flex-shrink:0;
+  }
+  h1{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(32px,5vw,44px);
+    font-weight:700;
+    letter-spacing:-0.01em;
+    margin:0 0 6px 0;
+    color:var(--ink);
+  }
+  .role-line{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--teal);
+  }
+  .contact{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--text-soft);
+    text-align:right;
+    line-height:1.8;
+  }
+
+  .intro{
+    font-size:16px;
+    color:var(--text-soft);
+    max-width:640px;
+    margin:28px 0 48px 0;
+  }
+
+  .section-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .section-label::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line-soft);
+  }
+
+  .ledger{
+    display:grid;
+    grid-template-columns:56px 1fr;
+    gap:0;
+    margin-bottom:56px;
+  }
+  .rail{
+    position:relative;
+    display:flex;
+    justify-content:center;
+  }
+  .rail::before{
+    content:"";
+    position:absolute;
+    top:6px;
+    bottom:6px;
+    width:2px;
+    background:var(--line-soft);
+  }
+  .rail .tick{
+    position:relative;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:var(--paper);
+    border:2px solid var(--brass);
+    margin-top:2px;
+    z-index:1;
+  }
+
+  .case{
+    background:var(--paper-panel);
+    border:1px solid var(--line-soft);
+    border-left:3px solid var(--ink);
+    padding:28px 32px;
+  }
+  .case-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:18px;
+    padding-bottom:18px;
+    border-bottom:1px dashed var(--line-soft);
+  }
+  .case-title{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:22px;
+    font-weight:700;
+    color:var(--ink);
+    margin:0 0 4px 0;
+  }
+  .case-sub{
+    font-size:13px;
+    color:var(--text-soft);
+  }
+  .case-meta{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--teal);
+    text-align:right;
+  }
+  .case-meta div{
+    white-space:nowrap;
+    line-height:1.9;
+  }
+
+  .stat-row{
+    display:flex;
+    gap:36px;
+    margin-bottom:22px;
+    flex-wrap:wrap;
+  }
+  .stat{
+    font-family:'IBM Plex Mono',monospace;
+    display:block;
+    width:190px;
+    flex:0 0 auto;
+  }
+  .stat .num{
+    font-size:20px;
+    font-weight:500;
+    color:var(--ink);
+    display:block;
+  }
+  .stat .label{
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--text-soft);
+  }
+
+  .stac{
+    display:grid;
+    grid-template-columns:100px 1fr;
+    gap:6px 18px;
+    margin-bottom:10px;
+  }
+  .stac dt{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--brass);
+    padding-top:2px;
+  }
+  .stac dd{
+    margin:0 0 14px 0;
+    font-size:14.5px;
+    color:var(--text);
+  }
+
+  footer{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:2px solid var(--ink);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--text-soft);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+  @media (max-width:600px){
+    .ledger{grid-template-columns:24px 1fr;}
+    .rail .tick{width:9px;height:9px;}
+    .case{padding:20px;}
+    .case-meta{text-align:left;}
+    .contact{text-align:left;}
+    header{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="header-left">
+      <img class="avatar" src="photo.jpg" alt="Chizaram Okoye">
+      <div>
+        <h1>Chizaram Okoye</h1>
+        <div class="role-line">Project Delivery &amp; Operations</div>
+      </div>
+    </div>
+    <div class="contact">
+      okoyechizaram2017@gmail.com<br>
+      +234 906 699 6674<br>
+      linkedin.com/in/chizaramokoye
+    </div>
+  </header>
+
+  <p class="intro">
+    A short record of how projects actually got delivered — scope, timeline, and outcome — rather than a list of duties. Two initiatives below, shown as they ran.
+  </p>
+
+  <div class="section-label">Case Studies</div>
+
+  <div class="ledger">
+    <div class="rail"><div class="tick"></div></div>
+    <div class="case">
+      <div class="case-head">
+        <div>
+          <p class="case-title">The Royals — NGO Website</p>
+          <p class="case-sub">Donations &amp; Awareness Platform · Stanix Consulting</p>
+        </div>
+        <div class="case-meta">
+          <div>ROLE — PROJECT MANAGER</div>
+          <div>TIMELINE — 6 WEEKS</div>
+          <div>YEAR — 2024–PRESENT</div>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat"><span class="num">6 wks</span><span class="label">Delivery Window</span></div>
+        <div class="stat"><span class="num">2</span><span class="label">Site Goals: Donations + Awareness</span></div>
+      </div>
+
+      <dl class="stac">
+        <dt>Situation</dt>
+        <dd>The Royals needed a single website to serve two goals at once: driving donations and raising awareness of its programs, with no PRD or delivery plan yet in place.</dd>
+
+        <dt>Task</dt>
+        <dd>Own delivery end-to-end within a 6-week window, and keep the project's scope from drifting as new requests came in.</dd>
+
+        <dt>Action</dt>
+        <dd>Partnered directly with the Product Manager to shape the PRD and define scope up front. Coordinated design and development work against that scope, ran regular check-ins to catch misalignment early, and pushed back on out-of-scope requests to protect the timeline and the team's focus.</dd>
+
+        <dt>Result</dt>
+        <dd>Delivered on schedule within 6 weeks, with a live site supporting both the donation and awareness/program goals it was scoped for.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="ledger">
+    <div class="rail"><div class="tick"></div></div>
+    <div class="case">
+      <div class="case-head">
+        <div>
+          <p class="case-title">3ple Hotel Ikorodu — Solar Infrastructure Rollout</p>
+          <p class="case-sub">Technical Infrastructure &amp; Operations · Cesol3nergy</p>
+        </div>
+        <div class="case-meta">
+          <div>ROLE — TECHNICAL INFRA. PM</div>
+          <div>PORTFOLIO — ₦78.64M+</div>
+          <div>YEAR — 2022–2024</div>
+        </div>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat"><span class="num">+/-5%</span><span class="label">Of Financial Forecast</span></div>
+        <div class="stat"><span class="num">94%</span><span class="label">Stakeholder Satisfaction (Portfolio)</span></div>
+      </div>
+
+      <dl class="stac">
+        <dt>Situation</dt>
+        <dd>3ple Hotel Ikorodu was one client within a solar infrastructure portfolio exceeding ₦78.64M in cumulative budgets, needing installation delivered on schedule and within tight financial forecasts.</dd>
+
+        <dt>Task</dt>
+        <dd>Manage planning, budget, and schedule for the installation, while coordinating the client, vendor, and installation teams through to compliant close-out.</dd>
+
+        <dt>Action</dt>
+        <dd>Tracked milestones and schedules in Jira, maintained budget records and structured project documentation, and coordinated User Acceptance Testing and compliance checks ahead of close-out. Built and maintained the working relationship with the client and installation teams throughout.</dd>
+
+        <dt>Result</dt>
+        <dd>Delivered within plus or minus 5% of financial forecast, part of a portfolio that achieved a 94% stakeholder satisfaction rate across clients served, including 3ple Hotel Ikorodu.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <footer>
+    <span>Chizaram Okoye — Project Delivery Portfolio</span>
+    <span>Google Project Management Professional Certificate, March 2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
