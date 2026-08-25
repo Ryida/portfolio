@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Chizaram Okoye — Project Delivery Portfolio</title>
+<title>Chizaram Okoye — Technical Project Manager Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -213,6 +213,110 @@
     color:var(--text);
   }
 
+  .summary-text{
+    font-size:15.5px;
+    color:var(--text);
+    max-width:720px;
+    margin:0 0 48px 0;
+  }
+
+  .chip-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:0 0 48px 0;
+  }
+  .chip{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.02em;
+    padding:7px 14px;
+    border:1px solid var(--line-soft);
+    border-radius:20px;
+    background:var(--paper-panel);
+    color:var(--ink);
+  }
+
+  .exp-block{
+    margin-bottom:56px;
+  }
+  .exp-item{
+    background:var(--paper-panel);
+    border:1px solid var(--line-soft);
+    border-left:3px solid var(--teal);
+    padding:24px 32px;
+    margin-bottom:16px;
+  }
+  .exp-item:last-child{margin-bottom:0;}
+  .exp-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:16px;
+    padding-bottom:16px;
+    border-bottom:1px dashed var(--line-soft);
+  }
+  .exp-title{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:19px;
+    font-weight:700;
+    color:var(--ink);
+    margin:0 0 4px 0;
+  }
+  .exp-sub{
+    font-size:13px;
+    color:var(--text-soft);
+  }
+  .exp-meta{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    color:var(--teal);
+    text-align:right;
+    white-space:nowrap;
+  }
+  .exp-bullets{
+    margin:0;
+    padding-left:18px;
+  }
+  .exp-bullets li{
+    font-size:14.5px;
+    color:var(--text);
+    margin-bottom:10px;
+  }
+  .exp-bullets li:last-child{margin-bottom:0;}
+  .exp-bullets strong{
+    color:var(--ink);
+  }
+
+  .credentials-row{
+    display:flex;
+    gap:24px;
+    flex-wrap:wrap;
+    margin-bottom:56px;
+  }
+  .credential{
+    background:var(--paper-panel);
+    border:1px solid var(--line-soft);
+    border-left:3px solid var(--brass);
+    padding:18px 24px;
+    flex:1 1 260px;
+  }
+  .credential .cred-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--brass);
+    display:block;
+    margin-bottom:6px;
+  }
+  .credential .cred-body{
+    font-size:14.5px;
+    color:var(--text);
+  }
+
   footer{
     margin-top:40px;
     padding-top:20px;
@@ -244,7 +348,7 @@
       <img class="avatar" src="photo.jpg.jpeg" alt="Chizaram Okoye">
       <div>
         <h1>Chizaram Okoye</h1>
-        <div class="role-line">Project Delivery &amp; Operations</div>
+        <div class="role-line">Technical Project Manager</div>
       </div>
     </div>
     <div class="contact">
@@ -255,8 +359,76 @@
   </header>
 
   <p class="intro">
-    A short record of how projects actually got delivered — scope, timeline, and outcome — rather than a list of duties. Five projects below, shown as they ran.
+    A record of how projects actually got delivered — scope, timeline, and outcome — under pressure and change, not just a list of duties. Summary, experience, and five projects below, shown as they ran.
   </p>
+
+  <div class="section-label">Professional Summary</div>
+  <p class="summary-text">
+    Technical Project Manager with 5+ years delivering concurrent technology, infrastructure, and operations projects across consulting and clean-energy environments. Track record of protecting budget, schedule, and quality through major scope changes — including a mid-project system redesign that closed with zero critical defects across a 10-project portfolio, and a full monitoring-architecture overhaul across 60+ field devices. Strong in end-to-end delivery, risk and dependency management, vendor coordination, and governance reporting. Seeking to bring this record of hands-on delivery under pressure into a project management role within a large global technology organization.
+  </p>
+
+  <div class="section-label">Core Competencies</div>
+  <div class="chip-row">
+    <span class="chip">Technical Project Delivery</span>
+    <span class="chip">Multi-Project Coordination</span>
+    <span class="chip">Project Planning &amp; Scheduling</span>
+    <span class="chip">Risk &amp; Dependency Management</span>
+    <span class="chip">Budget &amp; Cost Management</span>
+    <span class="chip">Vendor &amp; Contractor Management</span>
+    <span class="chip">UAT &amp; Implementation Readiness</span>
+    <span class="chip">Governance &amp; Reporting</span>
+    <span class="chip">Data Analysis &amp; Performance Improvement</span>
+  </div>
+
+  <div class="section-label">Professional Experience</div>
+  <div class="exp-block">
+    <div class="exp-item">
+      <div class="exp-head">
+        <div>
+          <p class="exp-title">Technical Project Manager — Stanix Consulting</p>
+          <p class="exp-sub">Lagos, Nigeria</p>
+        </div>
+        <div class="exp-meta">SEP 2025 – MAY 2026</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Led <strong>4–5 concurrent</strong> technical and consulting projects within a <strong>20+ engagement</strong> portfolio, coordinating up to <strong>18</strong> internal, client, and vendor stakeholders, contributing to a <strong>15% improvement</strong> in delivery speed.</li>
+        <li>Maintained integrated delivery plans, milestone trackers, RAID logs, and dependency registers, achieving <strong>93% milestone adherence</strong> and cutting overdue delivery actions by <strong>28%</strong>.</li>
+        <li>Standardised project reporting and governance templates across <strong>20+ engagements</strong>, cutting reporting turnaround time by <strong>35%</strong>.</li>
+        <li>Managed stakeholder communication across concurrent engagements, sustaining <strong>92% stakeholder satisfaction</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-head">
+        <div>
+          <p class="exp-title">Technical Project Manager — Cesol3nergy</p>
+          <p class="exp-sub">Lagos, Nigeria</p>
+        </div>
+        <div class="exp-meta">FEB 2023 – DEC 2024</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Managed end-to-end delivery of <strong>10 solar infrastructure projects</strong> (typically 3 concurrent), with cumulative budgets exceeding <strong>₦78.64 million</strong>.</li>
+        <li>Controlled schedules, spend, and delivery forecasts, holding projects within a <strong>5% margin</strong> of financial forecast and <strong>92% on-time</strong> milestone completion.</li>
+        <li>Led multidisciplinary teams of up to <strong>14 engineers, technicians, and installers</strong>, coordinating <strong>5 external vendors</strong>.</li>
+        <li>Directed UAT and technical validation, closing <strong>27 technical and punch-list issues</strong> before handover — <strong>zero critical defects</strong> at close-out across the portfolio.</li>
+      </ul>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-head">
+        <div>
+          <p class="exp-title">Operations Project Lead — Link-O</p>
+          <p class="exp-sub">Service Operations</p>
+        </div>
+        <div class="exp-meta">AUG 2020 – JUL 2022</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Led technical service operations handling <strong>100+ weekly enquiries</strong>, maintaining a <strong>96% resolution rate</strong>.</li>
+        <li>Redesigned escalation protocols and service-to-delivery workflows, cutting average resolution time by <strong>12%</strong>.</li>
+        <li>Developed performance dashboards, improving reporting accuracy by <strong>15%</strong>.</li>
+      </ul>
+    </div>
+  </div>
 
   <div class="section-label">Case Studies</div>
 
@@ -440,9 +612,21 @@
     </div>
   </div>
 
+  <div class="section-label">Certification &amp; Education</div>
+  <div class="credentials-row">
+    <div class="credential">
+      <span class="cred-label">Certification</span>
+      <div class="cred-body">Google Project Management Professional Certificate — 2026</div>
+    </div>
+    <div class="credential">
+      <span class="cred-label">Education</span>
+      <div class="cred-body">B.Sc. Entrepreneurship – Management, Second Class Honours (Upper Division)<br>Nnamdi Azikiwe University, Nigeria · Oct 2017 – Dec 2022</div>
+    </div>
+  </div>
+
   <footer>
-    <span>Chizaram Okoye — Project Delivery Portfolio</span>
-    <span>Google Project Management Professional Certificate, March 2026</span>
+    <span>Chizaram Okoye — Technical Project Manager Portfolio</span>
+    <span>Google Project Management Professional Certificate, 2026</span>
   </footer>
 
 </div>
