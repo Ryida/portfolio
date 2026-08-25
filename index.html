@@ -317,6 +317,36 @@
     color:var(--text);
   }
 
+  .tool-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(108px, 1fr));
+    gap:12px;
+    margin:0 0 56px 0;
+  }
+  .tool-card{
+    background:var(--paper-panel);
+    border:1px solid var(--line-soft);
+    border-radius:8px;
+    padding:16px 10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    text-align:center;
+  }
+  .tool-card img{
+    width:30px;
+    height:30px;
+    object-fit:contain;
+  }
+  .tool-card span{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:0.02em;
+    color:var(--text-soft);
+    line-height:1.3;
+  }
+
   footer{
     margin-top:40px;
     padding-top:20px;
@@ -428,6 +458,21 @@
         <li>Developed performance dashboards, improving reporting accuracy by <strong>15%</strong>.</li>
       </ul>
     </div>
+  </div>
+
+  <div class="section-label">Technical Tools</div>
+  <div class="tool-grid">
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/jira/2A4A6B" alt="Jira logo" onerror="this.style.display='none'"><span>Jira</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/trello/2A4A6B" alt="Trello logo" onerror="this.style.display='none'"><span>Trello</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/microsoftoffice/2A4A6B" alt="Microsoft Office logo" onerror="this.style.display='none'"><span>MS Office</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/google/2A4A6B" alt="Google Workspace logo" onerror="this.style.display='none'"><span>Google Workspace</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/canva/2A4A6B" alt="Canva logo" onerror="this.style.display='none'"><span>Canva</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/notion/2A4A6B" alt="Notion logo" onerror="this.style.display='none'"><span>Notion</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/figma/2A4A6B" alt="Figma logo" onerror="this.style.display='none'"><span>Figma</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/github/2A4A6B" alt="GitHub logo" onerror="this.style.display='none'"><span>GitHub</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/claude/2A4A6B" alt="Claude logo" onerror="this.style.display='none'"><span>Claude</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/openai/2A4A6B" alt="ChatGPT logo" onerror="this.style.display='none'"><span>ChatGPT</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/googlegemini/2A4A6B" alt="Gemini logo" onerror="this.style.display='none'"><span>Gemini</span></div>
   </div>
 
   <div class="section-label">Case Studies</div>
